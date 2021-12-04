@@ -1,0 +1,32 @@
+[
+    {
+        "fullname" : "Gabriel Salangsang",
+        "status" : "dot-active",
+        "source" : "https://glsalangsang.000webhostapp.com/gab.jpg"
+    },
+    {
+        "fullname" : "Lyanne Marie T. David",
+        "status" : "dot-active",
+        "source" : "https://glsalangsang.000webhostapp.com/lyanne.jpg"
+    },
+    {
+        "fullname" : "Arvy Louis Mandal",
+        "status" : "dot-active",
+        "source" : "https://glsalangsang.000webhostapp.com/arvy.jpg"
+    },
+    {
+        "fullname" : "Mick Nixon Manuit",
+        "status" : "dot-non-active",
+        "source" : "https://glsalangsang.000webhostapp.com/mick.jpg"
+    },
+    {
+        "fullname" : "Klein Musngi",
+        "status" : "dot-non-active",
+        "source" : "https://glsalangsang.000webhostapp.com/klein.jpg"
+    },
+    {
+        "fullname" : "Rhema",
+        "status" : "dot-non-active",
+        "source" : "https://glsalangsang.000webhostapp.com/rhems.png"
+    }
+]
