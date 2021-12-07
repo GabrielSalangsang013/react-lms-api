@@ -54,13 +54,30 @@ app.post('/signup/create', (req, res) => {
    fs.readFile( __dirname + "/" + "users.json", 'utf8', function (err, data) {
       let gotData = JSON.parse(data);
       let postdata = req.body;
-      gotData.push(postdata);
 
-      fs.writeFile('users.json', JSON.stringify(gotData), 'utf8', () => {
-         console.log("New User added to the users.json file!");
-      });
+      let isExistUsername = false;
+      let isExistPassword = false;
 
-      res.send(JSON.stringify(gotData));
+      for(let i = 0; i < gotData.length; i++) {
+         if(gotData[i].username === postdata.username) {
+            isExistUsername = true;
+         }
+         if(gotData[i].password === postdata.password) {
+            isExistPassword = true;
+         }
+      }
+
+      if(isExistUsername == true || isExistPassword == true) {
+         res.send(JSON.stringify({'result': 'Username or Password has already exist'}));
+         console.log('Username or Password has already exist');
+      }else {
+         // Inserting new Data
+         gotData.push(postdata);
+         fs.writeFile('users.json', JSON.stringify(gotData), 'utf8', () => {
+            console.log('New User added to the JSON file');
+         });
+         res.send(JSON.stringify(gotData));
+      }
    });
 })
 
