@@ -32,7 +32,7 @@ app.post('/api/login', function (req, res) {
    });
 })
 
-app.post('/api/news', function (req, res) {
+app.get('/api/news', function (req, res) {
    fs.readFile( __dirname + "/" + "news.json", 'utf8', function (err, data) {
       res.send(data);
    });
